@@ -11,15 +11,14 @@ app_license = "agpl-3.0"
 required_apps = ["tcf_core"]
 
 # Each item in the list will be shown as an app in the apps page
-add_to_apps_screen = [
-	{
-		"name": "tcf_hr",
-		"logo": "/assets/tcf_hr/icons/palette-1/app-hr.png",
-		"title": "HR",
-		"route": "/tcf_hr_admin",
-		"has_permission": "tcf_hr.api.permission.has_app_permission"
-	}
-]
+# add_to_apps_screen = [
+# 	{
+# 		"name": "tcf_hr",
+# 		"logo": "/assets/tcf_hr/icons/palette-1/app-hr.png",
+# 		"title": "HR",
+# 		"route": "/tcf_hr_admin"
+# 	}
+# ]
 
 # Includes in <head>
 # ------------------
