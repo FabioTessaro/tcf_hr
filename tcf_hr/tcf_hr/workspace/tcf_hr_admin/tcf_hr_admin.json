@@ -16,7 +16,7 @@
  "idx": 0,
  "indicator_color": "green",
  "is_hidden": 0,
- "label": "TCF HR Admin",
+ "label": "HR Admin",
  "link_type": "DocType",
  "links": [
   {
@@ -148,6 +148,6 @@
  "roles": [],
  "sequence_id": 0.0,
  "shortcuts": [],
- "title": "TCF HR Admin",
+ "title": "HR Admin",
  "type": "Workspace"
 }
