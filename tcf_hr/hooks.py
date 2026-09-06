@@ -20,6 +20,16 @@ required_apps = ["tcf_core", "hrms"]
 # 	}
 # ]
 
+# Fixtures
+# ------------
+
+fixtures = [
+	{
+		"dt": "Desktop Icon",
+		"filters": [["app", "in", ["tcf_hr"]]],
+	}
+]
+
 # Includes in <head>
 # ------------------
 

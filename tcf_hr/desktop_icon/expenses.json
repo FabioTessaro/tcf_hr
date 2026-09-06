@@ -1,0 +1,22 @@
+{
+ "app": "tcf_hr",
+ "creation": "2026-09-06 11:42:53.279747",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon": "",
+ "icon_type": "Link",
+ "idx": 0,
+ "label": "Expenses",
+ "link_to": "Expenses",
+ "link_type": "Workspace Sidebar",
+ "logo_url": "/assets/tcf_hr/icons/palette-1/hr-expenses.png",
+ "modified": "2026-09-06 11:56:59.421322",
+ "modified_by": "Administrator",
+ "name": "Expenses",
+ "owner": "Administrator",
+ "parent_icon": "Frappe HR",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}
