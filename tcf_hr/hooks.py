@@ -20,7 +20,7 @@ required_apps = ["tcf_core", "hrms"]
 # 	}
 # ]
 
-# Fixtures
+# Fixtures and patches
 # ------------
 
 fixtures = [
@@ -29,6 +29,8 @@ fixtures = [
 		"filters": [["app", "in", ["tcf_hr"]]],
 	}
 ]
+
+extend_bootinfo = "tcf_hr.patches.boot.patch_app_title"
 
 # Includes in <head>
 # ------------------
