@@ -85,7 +85,12 @@ required_apps = ["tcf_core", "hrms"]
 # ------------
 
 # before_install = "tcf_hr.install.before_install"
-# after_install = "tcf_hr.install.after_install"
+after_install = "tcf_hr.install.after_install"
+after_migrate = "tcf_hr.install.after_migrate"
+setup_wizard_complete = "tcf_hr.install.after_setup_wizard"
+
+# Branding: patches the boot payload (apps-screen tile + sidebar rail logo), see config/branding.json
+extend_bootinfo = "tcf_hr.setup.branding.extend_bootinfo"
 
 # Uninstallation
 # ------------
@@ -136,6 +141,10 @@ required_apps = ["tcf_core", "hrms"]
 # Document Events
 # ---------------
 # Hook on document methods and events
+
+doc_events = {
+	"Company": {"on_update": "tcf_hr.setup.purge.purge_company_default_departments"},
+}
 
 # doc_events = {
 # 	"*": {
