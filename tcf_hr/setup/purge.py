@@ -47,6 +47,19 @@ HRMS_SEEDS = {
 		"Notice Period",
 		"Incentives",
 	],
+	"Activity Type": [
+		"Planning",
+		"Research",
+		"Proposal Writing",
+		"Execution",
+		"Communication",
+	],
+	"Salary Component": [
+		"Leave Encashment",
+		"Arrear",
+		"Basic",
+		"Income Tax",
+	],
 }
 
 # Created per company by erpnext Company.create_default_departments
