@@ -1,0 +1,127 @@
+/* Navbar button motion, the same as the website's Home / Contacts / Company buttons (tcf_web navbar-button.scss).
+   Use: class "nav-button" on the link and "nav-button__label" on the element that holds its content.
+
+   Desktop: the label gets an underline and lifts 2px on hover or keyboard focus.
+   Phones:  a slanted pill tint (visual-elements/_slanted-pill.scss) fades in while the button is pressed, and the
+            button scales up a little.
+   The bell adds "nav-button--indicator": the brand's slanted indicator (visual-elements/_slanted-indicator.scss),
+   a thin slanted line at the right edge that fades in on hover, with the content nudged left. */
+
+.nav-button {
+	position: relative;
+	isolation: isolate;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.nav-button__label {
+	display: inline-flex; /* transform has no effect on inline elements */
+	align-items: center;
+	gap: 0.35rem;
+	border-bottom: 1px solid transparent;
+	padding-bottom: 0.25rem;
+	transition:
+		border-color 0.25s ease,
+		transform 0.25s ease;
+}
+
+/* The page you are on keeps a yellow underline (yellow is the neutral accent) */
+.nav-button.router-link-active .nav-button__label {
+	border-bottom-color: var(--tcf-accent-yellow, #f3bb19);
+}
+
+/* Slanted pill, shown on press (and on hover or focus on touch-capable laptops, like the website) */
+.nav-button::before {
+	content: "";
+	position: absolute;
+	inset: -0.05rem -0.1rem;
+	z-index: -1;
+	background-color: color-mix(in srgb, currentColor 12%, transparent);
+	opacity: 0;
+	transform: skewX(calc(-1 * var(--tcf-slant, 10deg)));
+	transition: opacity 0.15s ease;
+	pointer-events: none;
+}
+
+/* Desktop: underline + lift */
+@media (min-width: 768px) {
+	.nav-button::before {
+		display: none; /* the pill is the mobile feedback */
+	}
+	.nav-button:focus-visible .nav-button__label {
+		border-bottom-color: currentColor;
+		transform: translateY(-2px);
+	}
+	.nav-button.router-link-active:focus-visible .nav-button__label {
+		border-bottom-color: var(--tcf-accent-yellow, #f3bb19);
+	}
+}
+@media (min-width: 768px) and (hover: hover) {
+	.nav-button:hover .nav-button__label {
+		border-bottom-color: currentColor;
+		transform: translateY(-2px);
+	}
+	.nav-button.router-link-active:hover .nav-button__label {
+		border-bottom-color: var(--tcf-accent-yellow, #f3bb19);
+	}
+}
+
+/* Bell: slanted indicator on the right edge */
+.nav-button--indicator::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 1px;
+	background-color: currentColor;
+	opacity: 0;
+	transform: skewX(calc(-1 * var(--tcf-slant, 10deg)));
+	transition: opacity 0.25s ease;
+	pointer-events: none;
+}
+@media (min-width: 768px) {
+	.nav-button--indicator {
+		padding-right: 0.2rem;
+	}
+	.nav-button--indicator:focus-visible::after {
+		opacity: 1;
+	}
+	.nav-button--indicator:focus-visible .nav-button__label {
+		transform: translateX(-0.4rem);
+	}
+}
+@media (min-width: 768px) and (hover: hover) {
+	.nav-button--indicator:hover::after {
+		opacity: 1;
+	}
+	/* the indicator replaces the lift: the content moves left instead */
+	.nav-button--indicator:hover .nav-button__label {
+		border-bottom-color: transparent;
+		transform: translateX(-0.4rem);
+	}
+	.nav-button--indicator.router-link-active:hover .nav-button__label {
+		border-bottom-color: var(--tcf-accent-yellow, #f3bb19);
+	}
+}
+
+/* Phones: pill + scale on press, as the website's mobile buttons */
+@media (max-width: 767px) {
+	.nav-button {
+		display: inline-flex;
+		align-items: center;
+		min-height: 2.75rem;
+		padding: 0.5rem 1.25rem;
+		transition: transform 0.15s ease;
+	}
+	.nav-button:active::before,
+	.nav-button:focus-visible::before {
+		opacity: 1;
+	}
+	.nav-button:active {
+		transform: scale(1.06);
+	}
+	.nav-button--indicator::after {
+		display: none; /* no hover on touch: the pill is the feedback */
+	}
+}

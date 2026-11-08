@@ -144,7 +144,22 @@ extend_bootinfo = "tcf_hr.setup.branding.extend_bootinfo"
 
 doc_events = {
 	"Company": {"on_update": "tcf_hr.setup.purge.purge_company_default_departments"},
+	"Employee Checkin": {
+		"validate": "tcf_hr.policy.validate_employee_checkin",
+		"after_insert": "tcf_hr.realtime.checkin_created",
+	},
+	"PWA Notification": {"after_insert": "tcf_hr.realtime.notification_created"},
 }
+
+# Website navbar: contribute the HR button (tcf_web.entries asks every app for its entries)
+tcf_web_account_entries = ["tcf_hr.entries.hr_entry"]
+
+# The HR app lives at /hrms (employee app and roster in one). /hrms/<path> is already routed to the
+# page "hrms" by hrms; tcf_hr/www/hrms.html replaces its shell. Redirects are resolved before routes.
+website_redirects = [
+	{"source": r"/hr(/.*)?", "target": "/hrms/roster"},
+	{"source": r"/hrms/(login|forgot-password)", "target": "/login?redirect-to=/hrms"},
+]
 
 # doc_events = {
 # 	"*": {

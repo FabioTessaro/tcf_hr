@@ -1,0 +1,31 @@
+{
+	"doctypes": {
+		"Employee": {"ops": ["read"]},
+		"Employee Checkin": {"ops": ["read", "create"]},
+		"Leave Application": {"ops": ["read", "create", "write", "submit", "cancel", "delete"]},
+		"Compensatory Leave Request": {"ops": ["read", "create", "write", "submit", "cancel", "delete"]},
+		"Expense Claim": {"ops": ["read", "create", "write", "submit", "cancel", "delete"]},
+		"Employee Advance": {"ops": ["read", "create", "write", "submit", "cancel", "delete"]},
+		"Attendance Request": {"ops": ["read", "create", "write", "submit", "cancel", "delete"]},
+		"Shift Request": {"ops": ["read", "create", "write", "submit", "cancel", "delete"]},
+		"Shift Assignment": {"ops": ["read", "create", "write", "submit", "cancel", "delete"]},
+		"Shift Schedule Assignment": {"ops": ["read"]},
+		"Salary Slip": {"ops": ["read"]},
+		"Payroll Period": {"ops": ["read"]},
+		"PWA Notification": {"ops": ["read"]}
+	},
+	"child_doctypes": ["Expense Claim Detail", "Expense Taxes and Charges"],
+	"link_doctypes": [
+		"Employee",
+		"Leave Type",
+		"Expense Claim Type",
+		"Shift Type",
+		"Company",
+		"Cost Center",
+		"Account",
+		"Currency",
+		"Project",
+		"Holiday List",
+		"Payroll Period"
+	]
+}

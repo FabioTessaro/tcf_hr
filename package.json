@@ -1,0 +1,10 @@
+{
+	"name": "tcf_hr",
+	"private": true,
+	"scripts": {
+		"postinstall": "yarn install-frontend-deps",
+		"install-frontend-deps": "cd frontend && yarn install",
+		"dev": "cd frontend && yarn dev",
+		"build": "cd frontend && yarn build"
+	}
+}

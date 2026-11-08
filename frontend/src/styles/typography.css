@@ -1,0 +1,182 @@
+/* Typefaces of the HR app. The --tf-* tokens come from tcf_web (tokens.css, per language and script).
+   Desktop values by default, the -mobile twin on phones (same breakpoint as the layout: 768px). */
+
+.tf-app-title {
+	font-family: var(--tf-app-title-stack);
+	font-weight: var(--tf-app-title-weight);
+	font-stretch: var(--tf-app-title-width);
+	font-style: var(--tf-app-title-style);
+	font-size: var(--tf-app-title-size);
+	line-height: var(--tf-app-title-line-height);
+	letter-spacing: var(--tf-app-title-letter-spacing);
+	text-transform: var(--tf-app-title-transform);
+}
+
+.tf-app-heading {
+	font-family: var(--tf-app-heading-stack);
+	font-weight: var(--tf-app-heading-weight);
+	font-stretch: var(--tf-app-heading-width);
+	font-style: var(--tf-app-heading-style);
+	font-size: var(--tf-app-heading-size);
+	line-height: var(--tf-app-heading-line-height);
+	letter-spacing: var(--tf-app-heading-letter-spacing);
+	text-transform: var(--tf-app-heading-transform);
+}
+
+.tf-app-body {
+	font-family: var(--tf-app-body-stack);
+	font-weight: var(--tf-app-body-weight);
+	font-stretch: var(--tf-app-body-width);
+	font-style: var(--tf-app-body-style);
+	font-size: var(--tf-app-body-size);
+	line-height: var(--tf-app-body-line-height);
+	letter-spacing: var(--tf-app-body-letter-spacing);
+	text-transform: var(--tf-app-body-transform);
+}
+
+.tf-app-label {
+	font-family: var(--tf-app-label-stack);
+	font-weight: var(--tf-app-label-weight);
+	font-stretch: var(--tf-app-label-width);
+	font-style: var(--tf-app-label-style);
+	font-size: var(--tf-app-label-size);
+	line-height: var(--tf-app-label-line-height);
+	letter-spacing: var(--tf-app-label-letter-spacing);
+	text-transform: var(--tf-app-label-transform);
+}
+
+.tf-app-nav {
+	font-family: var(--tf-app-nav-stack);
+	font-weight: var(--tf-app-nav-weight);
+	font-stretch: var(--tf-app-nav-width);
+	font-style: var(--tf-app-nav-style);
+	font-size: var(--tf-app-nav-size);
+	line-height: var(--tf-app-nav-line-height);
+	letter-spacing: var(--tf-app-nav-letter-spacing);
+	text-transform: var(--tf-app-nav-transform);
+}
+
+.tf-app-button {
+	font-family: var(--tf-app-button-stack);
+	font-weight: var(--tf-app-button-weight);
+	font-stretch: var(--tf-app-button-width);
+	font-style: var(--tf-app-button-style);
+	font-size: var(--tf-app-button-size);
+	line-height: var(--tf-app-button-line-height);
+	letter-spacing: var(--tf-app-button-letter-spacing);
+	text-transform: var(--tf-app-button-transform);
+}
+
+.tf-app-pill {
+	font-family: var(--tf-app-pill-stack);
+	font-weight: var(--tf-app-pill-weight);
+	font-stretch: var(--tf-app-pill-width);
+	font-style: var(--tf-app-pill-style);
+	font-size: var(--tf-app-pill-size);
+	line-height: var(--tf-app-pill-line-height);
+	letter-spacing: var(--tf-app-pill-letter-spacing);
+	text-transform: var(--tf-app-pill-transform);
+}
+
+.tf-app-caption {
+	font-family: var(--tf-app-caption-stack);
+	font-weight: var(--tf-app-caption-weight);
+	font-stretch: var(--tf-app-caption-width);
+	font-style: var(--tf-app-caption-style);
+	font-size: var(--tf-app-caption-size);
+	line-height: var(--tf-app-caption-line-height);
+	letter-spacing: var(--tf-app-caption-letter-spacing);
+	text-transform: var(--tf-app-caption-transform);
+}
+
+@media (max-width: 767px) {
+
+	.tf-app-title {
+		font-family: var(--tf-app-title-mobile-stack);
+		font-weight: var(--tf-app-title-mobile-weight);
+		font-stretch: var(--tf-app-title-mobile-width);
+		font-style: var(--tf-app-title-mobile-style);
+		font-size: var(--tf-app-title-mobile-size);
+		line-height: var(--tf-app-title-mobile-line-height);
+		letter-spacing: var(--tf-app-title-mobile-letter-spacing);
+		text-transform: var(--tf-app-title-mobile-transform);
+	}
+
+	.tf-app-heading {
+		font-family: var(--tf-app-heading-mobile-stack);
+		font-weight: var(--tf-app-heading-mobile-weight);
+		font-stretch: var(--tf-app-heading-mobile-width);
+		font-style: var(--tf-app-heading-mobile-style);
+		font-size: var(--tf-app-heading-mobile-size);
+		line-height: var(--tf-app-heading-mobile-line-height);
+		letter-spacing: var(--tf-app-heading-mobile-letter-spacing);
+		text-transform: var(--tf-app-heading-mobile-transform);
+	}
+
+	.tf-app-body {
+		font-family: var(--tf-app-body-mobile-stack);
+		font-weight: var(--tf-app-body-mobile-weight);
+		font-stretch: var(--tf-app-body-mobile-width);
+		font-style: var(--tf-app-body-mobile-style);
+		font-size: var(--tf-app-body-mobile-size);
+		line-height: var(--tf-app-body-mobile-line-height);
+		letter-spacing: var(--tf-app-body-mobile-letter-spacing);
+		text-transform: var(--tf-app-body-mobile-transform);
+	}
+
+	.tf-app-label {
+		font-family: var(--tf-app-label-mobile-stack);
+		font-weight: var(--tf-app-label-mobile-weight);
+		font-stretch: var(--tf-app-label-mobile-width);
+		font-style: var(--tf-app-label-mobile-style);
+		font-size: var(--tf-app-label-mobile-size);
+		line-height: var(--tf-app-label-mobile-line-height);
+		letter-spacing: var(--tf-app-label-mobile-letter-spacing);
+		text-transform: var(--tf-app-label-mobile-transform);
+	}
+
+	.tf-app-nav {
+		font-family: var(--tf-app-nav-mobile-stack);
+		font-weight: var(--tf-app-nav-mobile-weight);
+		font-stretch: var(--tf-app-nav-mobile-width);
+		font-style: var(--tf-app-nav-mobile-style);
+		font-size: var(--tf-app-nav-mobile-size);
+		line-height: var(--tf-app-nav-mobile-line-height);
+		letter-spacing: var(--tf-app-nav-mobile-letter-spacing);
+		text-transform: var(--tf-app-nav-mobile-transform);
+	}
+
+	.tf-app-button {
+		font-family: var(--tf-app-button-mobile-stack);
+		font-weight: var(--tf-app-button-mobile-weight);
+		font-stretch: var(--tf-app-button-mobile-width);
+		font-style: var(--tf-app-button-mobile-style);
+		font-size: var(--tf-app-button-mobile-size);
+		line-height: var(--tf-app-button-mobile-line-height);
+		letter-spacing: var(--tf-app-button-mobile-letter-spacing);
+		text-transform: var(--tf-app-button-mobile-transform);
+	}
+
+	.tf-app-pill {
+		font-family: var(--tf-app-pill-mobile-stack);
+		font-weight: var(--tf-app-pill-mobile-weight);
+		font-stretch: var(--tf-app-pill-mobile-width);
+		font-style: var(--tf-app-pill-mobile-style);
+		font-size: var(--tf-app-pill-mobile-size);
+		line-height: var(--tf-app-pill-mobile-line-height);
+		letter-spacing: var(--tf-app-pill-mobile-letter-spacing);
+		text-transform: var(--tf-app-pill-mobile-transform);
+	}
+
+	.tf-app-caption {
+		font-family: var(--tf-app-caption-mobile-stack);
+		font-weight: var(--tf-app-caption-mobile-weight);
+		font-stretch: var(--tf-app-caption-mobile-width);
+		font-style: var(--tf-app-caption-mobile-style);
+		font-size: var(--tf-app-caption-mobile-size);
+		line-height: var(--tf-app-caption-mobile-line-height);
+		letter-spacing: var(--tf-app-caption-mobile-letter-spacing);
+		text-transform: var(--tf-app-caption-mobile-transform);
+	}
+
+}

@@ -1,0 +1,22 @@
+{
+	"name": "tcf-hr-frontend",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build --base=/assets/tcf_hr/frontend/ && yarn copy-html-entry",
+		"copy-html-entry": "cp ../tcf_hr/public/frontend/index.html ../tcf_hr/www/hrms.html"
+	},
+	"dependencies": {
+		"dayjs": "^1.11.13",
+		"pinia": "^3.0.0",
+		"socket.io-client": "^4.8.0",
+		"vue": "^3.5.0",
+		"vue-router": "^4.5.0"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^5.2.0",
+		"vite": "^6.0.0"
+	}
+}

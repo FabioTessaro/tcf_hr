@@ -1,0 +1,41 @@
+@import "./typography.css";
+@import "./motion.css";
+@import "./nav-button.css";
+@import "./indicator-row.css";
+
+/* Brand tokens (--tcf-*) come from tcf_web: /assets/tcf_web/components/tokens/tokens.css */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+	background: var(--tcf-background, #f1f2f2);
+	color: var(--tcf-primary-medium, #414141);
+	font-family: var(--tf-app-body-stack, system-ui, sans-serif);
+	font-weight: var(--tf-app-body-weight, 300);
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	color: inherit;
+}
+
+:focus-visible {
+	outline: 2px solid var(--tcf-accent-yellow, #f3bb19);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition: none !important;
+		animation: none !important;
+	}
+}
